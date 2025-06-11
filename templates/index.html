@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gesture Control App</title>
+</head>
+<body style="text-align:center; font-family:sans-serif;">
+    <h1>🖐️ Hand Gesture Recognition</h1>
+    <img src="{{ url_for('video_feed') }}" width="800" />
+    <br><br>
+    <button onclick="changeMode('cnn')">CNN Mode</button>
+    <button onclick="changeMode('mediapipe')">MediaPipe Mode</button>
+
+    <script>
+        function changeMode(mode) {
+            fetch('/set_mode/' + mode);
+        }
+    </script>
+</body>
+</html>

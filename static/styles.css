@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gesture Control App</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        img {
+            border: 4px solid #4caf50;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 24px;
+            margin: 20px 10px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>🖐️ Hand Gesture Recognition</h1>
+    <img src="{{ url_for('video_feed') }}" width="800" />
+    <br>
+    <button onclick="changeMode('cnn')">CNN Mode</button>
+    <button onclick="changeMode('mediapipe')">MediaPipe Mode</button>
+
+    <script>
+        function changeMode(mode) {
+            fetch('/set_mode/' + mode);
+        }
+    </script>
+</body>
+</html>
