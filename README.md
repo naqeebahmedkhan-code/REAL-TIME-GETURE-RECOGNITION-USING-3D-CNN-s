@@ -17,25 +17,16 @@ A computer vision-based real-time hand gesture recognition system that allows us
 
 🧾 Table of Contents
 Project Structure
-
 Installation
-
 Dataset Collection
-
 Model Training
-
 Running the Application
-
 Usage
-
 Model Architecture
-
 License
 
 📂 Project Structure
-graphql
-Copy
-Edit
+
 .
 ├── app.py                  # Flask app to serve live video feed
 ├── camera.py               # Handles frame capture and routing to recognizer/tracker
@@ -52,35 +43,24 @@ Edit
 └── data/
     ├── train/
     └── test/               # Organized gesture images by label
+
+
+    
 🛠️ Installation
 1. Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/gesture-control.git
+https://github.com/naqeebahmedkhan-code/REAL-TIME-GETURE-RECOGNITION-USING-3D-CNN-s.git
 cd gesture-control
 2. Create a Virtual Environment (optional but recommended)
-bash
-Copy
-Edit
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 3. Install Dependencies
-bash
-Copy
-Edit
 pip install -r requirements.txt
 You may need to install opencv-python, tensorflow, mediapipe, flask, pyautogui, matplotlib, etc.
 
 🎯 Dataset Collection
 Run the following to collect training data for gestures:
-
-bash
-Copy
-Edit
 python data_collector.py
 Prompts for mode: train or test
-
 Press:
 
 0 → move-right
@@ -96,24 +76,15 @@ ESC to exit
 Captured grayscale thresholded ROI images are saved in data/train/ or data/test/.
 
 🧠 Model Training
-Train the CNN model using:
 
-bash
-Copy
-Edit
+Train the CNN model using:
 python train.py
 Saves trained model in models/
-
 Saves model weights and architecture
-
 Outputs training accuracy/loss graph as training_history.png
 
 🚀 Running the Application
 Start the web server and open a browser to visualize the live gesture detection:
-
-bash
-Copy
-Edit
 python app.py
 Then go to: http://127.0.0.1:5000/
 
@@ -154,17 +125,11 @@ no-gesture	3	Neutral/no gesture shown
 
 ✅ Requirements
 Python 3.7+
-
 TensorFlow 2.x
-
 OpenCV
-
 Flask
-
 MediaPipe
-
 PyAutoGUI
-
 Matplotlib
 
 📄 License
@@ -172,9 +137,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 🙌 Acknowledgements
 TensorFlow
-
 MediaPipe
-
 OpenCV
-
 Flask
